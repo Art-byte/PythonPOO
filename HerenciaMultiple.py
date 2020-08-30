@@ -49,3 +49,5 @@ print('Carga', i.obtenerCarga())
 print('Duracion', i.obtenerDuracion())
 print('Titulo', i.obtenerTitulo())
 print('Pistoleros', i.obtenerPistoleros())
+
+
