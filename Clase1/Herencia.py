@@ -1,5 +1,11 @@
 class edificacion:
 
+    altura = 0
+    duenio = ""
+    precio = 0
+    ubicacion = ""
+
+
     def __init__(self, altura, duenio, precio, ubicacion):
         self.altura = altura
         self.duenio = duenio
@@ -64,5 +70,28 @@ class Comercializadora(edificacion):
         return self.areas_comercio
 
 
-    
+class Gubernamental(edificacion):
 
+    nivel_seguridad = 0
+
+    def __init__(self, altura, duenio, precio, ubicacion, nivel_seguridad):
+        super().indicarAltura(altura)
+        super().indicarDuenio(duenio)
+        super().indicarPrecio(precio)
+        super().indicarUbicacion(ubicacion)
+        self.nivel_seguridad = nivel_seguridad
+
+    def obtenerNivelSeguridad(self):
+        return self.nivel_seguridad 
+
+
+
+
+#Creamos un objeto de la clase 
+
+c = Comercializadora(3, "Arturo",5000 ,"CDMX", ["ropa", "electronicos"])
+
+print("Altura: ", c.obtenerAltura())
+print("Precio: ", c.obtenerPrecio())
+print("Duenio: ", c.obtenerDuenio())
+print("Areas: ", c.obtenerAreasComercio())
